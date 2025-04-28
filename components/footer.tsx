@@ -9,9 +9,7 @@ export function Footer() {
           <div>
             <div className="flex items-center gap-2 mb-4">
               <UtensilsCrossed className="h-8 w-8 text-primary" />
-              <span className="text-xl font-bold text-background">
-                DeliciousEats
-              </span>
+              <span className="text-xl font-bold ">DeliciousEats</span>
             </div>
             <p className="text-muted-foreground mb-4">
               Serving exceptional food with passion since 2010. We bring
