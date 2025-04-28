@@ -44,12 +44,12 @@ export function HeroSection() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="flex flex-col sm:flex-row gap-4"
           >
-            <Button className="bg-amber-500 hover:bg-amber-600 text-white px-8 py-6 text-lg rounded-full">
+            <Button className="bg-amber-500 hover:bg-amber-600 text-white px-8 py-6 text-lg rounded-full cursor-pointer">
               Order Online
             </Button>
             <Button
               variant="outline"
-              className="bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/20 text-white px-8 py-6 text-lg rounded-full"
+              className="bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/20 text-white px-8 py-6 text-lg rounded-full cursor-pointer"
             >
               View Our Menu
             </Button>

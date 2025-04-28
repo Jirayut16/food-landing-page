@@ -103,7 +103,7 @@ export function SpecialSection() {
             </div>
             <div className="mt-8 flex items-center justify-between">
               <span className="text-2xl font-bold">$29.99</span>
-              <button className="bg-primary hover:bg-primary/90 text-primary-foreground px-6 py-3 rounded-md transition-colors">
+              <button className="bg-primary hover:bg-primary/90 text-primary-foreground px-6 py-3 rounded-md transition-colors cursor-pointer">
                 Order Special
               </button>
             </div>

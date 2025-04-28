@@ -6,8 +6,10 @@ import Link from "next/link";
 import { useScroll } from "@/lib/hooks/use-scroll";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { UtensilsCrossed } from "lucide-react";
+import MobileNav from "./mobile-nav";
 
 export function AnimatedHeader() {
+  const navMenu = ["Menu", "About", "Specials", "Contact"];
   const scrolled = useScroll(50);
 
   return (
@@ -28,7 +30,7 @@ export function AnimatedHeader() {
           >
             <UtensilsCrossed
               className={cn(
-                "h-8 w-8",
+                "h-6 w-6 sm:h-8 sm:w-8",
                 scrolled ? "text-primary" : "text-white"
               )}
             />
@@ -38,7 +40,7 @@ export function AnimatedHeader() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.3, delay: 0.1 }}
             className={cn(
-              "font-bold text-xl",
+              "font-bold text-lg sm:text-xl",
               scrolled ? "text-primary" : "text-white"
             )}
           >
@@ -46,7 +48,7 @@ export function AnimatedHeader() {
           </motion.span>
         </Link>
         <nav className="hidden md:flex gap-6">
-          {["Menu", "About", "Specials", "Contact"].map((item, index) => (
+          {navMenu.map((item, index) => (
             <motion.div
               key={item}
               initial={{ opacity: 0, y: -10 }}
@@ -77,10 +79,18 @@ export function AnimatedHeader() {
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3, delay: 0.5 }}
-            className="bg-primary text-primary-foreground px-4 py-2 rounded-md hover:bg-primary/90 transition-colors"
+            className="hidden md:flex bg-primary text-primary-foreground px-4 py-2 rounded-md hover:bg-primary/90 transition-colors cursor-pointer"
           >
             Reserve a Table
           </motion.button>
+          <motion.div
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3, delay: 0.5 }}
+            className="md:hidden flex bg-muted text-primary px-4 py-2 rounded-full hover:bg-muted/80 transition-colors"
+          >
+            <MobileNav data={navMenu} />
+          </motion.div>
         </div>
       </div>
     </header>

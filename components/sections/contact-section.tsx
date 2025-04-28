@@ -48,7 +48,7 @@ export function ContactSection() {
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-4">Our Location</h3>
-                <div className="space-y-4">
+                <div className="space-y-4 text-sm">
                   <div className="flex items-start">
                     <MapPin className="h-5 w-5 text-primary mr-4 mt-0.5" />
                     <p>

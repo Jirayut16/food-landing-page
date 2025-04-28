@@ -54,7 +54,7 @@ export function TestimonialSection() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 cursor-pointer">
           {testimonials.map((testimonial, index) => (
             <motion.div
               key={testimonial.id}
@@ -62,7 +62,7 @@ export function TestimonialSection() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="bg-card border border-border rounded-lg p-6 hover:shadow-lg transition-shadow"
+              className="bg-card border border-border rounded-lg p-6 hover:shadow-lg dark:hover:shadow-white/10 transition-shadow"
             >
               <div className="flex items-center mb-4">
                 <div className="relative h-14 w-14 rounded-full overflow-hidden mr-4">
